@@ -1,8 +1,6 @@
 ﻿using SalesWebMvc.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace SalesWebMvc.Services
 {
@@ -21,6 +19,7 @@ namespace SalesWebMvc.Services
         }
         public void Insert(Seller obj)
         {
+            obj.Department = _contex.Department.First();
             _contex.Add(obj);
             _contex.SaveChanges();
         }
