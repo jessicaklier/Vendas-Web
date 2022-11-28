@@ -19,7 +19,6 @@ namespace SalesWebMvc.Services
         }
         public void Insert(Seller obj)
         {
-            obj.Department = _contex.Department.First();
             _contex.Add(obj);
             _contex.SaveChanges();
         }
